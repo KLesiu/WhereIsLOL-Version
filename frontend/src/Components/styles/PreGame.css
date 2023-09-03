@@ -1,0 +1,50 @@
+#preGame{
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgb(7, 61, 141) 100%)
+    ;
+    display: flex;
+    justify-content: space-around;
+    height: 80vh;
+    width: 100%;
+}
+#aboutMeHolder,#aboutGameHolder{
+    background-color: rgb(16, 112, 202);
+    border-radius: 10px;
+    color: wheat;
+    height: 80%;
+    font-size: 25px;
+    margin-top: 100px;
+    text-align: center;
+    width: 45%;
+}
+.rules{
+    padding: 15px;
+    text-align: center;
+}
+#startButton{
+    background-color: rgb(27, 27, 185);
+    border: none;
+    border-radius: 10px;
+    color: wheat;
+    cursor: pointer;
+    font-size: 25px;
+    font-family: 'Lilita One', cursive;
+    height: 10%;
+    width: 40%;
+}
+#startButton:hover{
+    background-color: rgb(36, 150, 226);
+}
+.startList{
+    display: flex;
+    list-style-type: none;
+    width: 90%;
+}
+.startList li {
+    width: 20%;
+}
+.startList li img{
+    cursor: pointer;
+    width: 75%;
+    height: 75%;
+}
