@@ -1,3 +1,21 @@
+@keyframes rotate {
+    from{
+        transform: rotate3d(0,0,0,0deg);
+    }
+    to{
+        transform: rotate3d(0,1,0,180deg);
+        opacity: 0.4;
+    }
+}
+@keyframes show {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
 header{
     align-items: center;
     background: rgb(2,0,36);
@@ -65,13 +83,31 @@ header h1{
     z-index: 1;
 }
 .glass h3{
-    height: 100%;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.212);
+    color: white;
+    display: flex;
+ 
+    justify-content: center;
+    font-family: 'Handjet', cursive;
+    font-size: 20px;
     position: absolute;
-    left: 30%;
-    top: 30%;
+    
+    opacity: 0;
     width: 100%;
     z-index: 2;
 
+}
+.rotate{
+animation-name: rotate;
+animation-duration: 4s;
+animation-fill-mode: forwards;
+}
+.show{
+animation-name: show;
+animation-delay: 4s;
+animation-duration: 1s;
+animation-fill-mode: forwards;
 }
 .hidden{
     display: none;
