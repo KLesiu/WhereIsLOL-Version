@@ -4,9 +4,46 @@ background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgb(7
    
 display: flex;
     justify-content: center;
+    position: relative;
     width: 100%;
 }
 .imgHolder img{
     cursor: pointer; 
     width: 90%;
+}
+#riven{
+    bottom: 5%;
+    left: 58%;
+    position: absolute;
+    height: 42%;
+    width: 9%;
+}
+#akali{
+    bottom: 43%;
+   
+    left: 24%;
+    position: absolute;
+    height: 4%;
+    width: 3%;
+}
+#nocturne{
+    bottom: 55%;
+    left: 84%;
+    position: absolute;
+    height: 8%;
+    width: 9%
+}
+#vladimir{
+    bottom: 5%;
+    left: 58%;
+    position: absolute;
+    height: 42%;
+    width: 9%;
+}
+#ziggs{
+    bottom: 65%;
+    left: 42%;
+    position: absolute;
+    height: 4%;
+    width: 2%;
 }
