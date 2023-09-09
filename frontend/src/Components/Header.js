@@ -19,16 +19,16 @@ const Header=(props)=>{
                 <h1>WhereIs Champion?</h1>
                 <button id="leaderboardButton">Leaderboard</button>
                 <ul className="championsBasket">
-                    <li><div className='glass'> <h3 className=''>Akali</h3><img className='champion' src="./champions/Akali.jpg">
+                    <li><div className='glass'> <h3 className=''>Akali</h3><img className='champion akali' src="./champions/Akali.jpg">
                         </img></div>
                         </li>
-                    <li><div className='glass'> <h3 className=''>Nocturne</h3>  <img className='champion' src="./champions/Nocturne.jpg"></img></div>
+                    <li><div className='glass'> <h3 className=''>Nocturne</h3>  <img className='champion nocturne' src="./champions/Nocturne.jpg"></img></div>
                        </li>
-                    <li><div className='glass'> <h3 className=''>Riven </h3><img className='champion' src="./champions/Riven.jpg"></img></div>
+                    <li><div className='glass'> <h3 className=''>Riven </h3><img className='champion riven' src="./champions/Riven.jpg"></img></div>
                         </li>
-                    <li><div className='glass'><h3 className=''>Vladimir</h3> <img className='champion' src="./champions/Vladimir.jpg"></img> </div>
+                    <li><div className='glass'><h3 className=''>Vladimir</h3> <img className='champion vladimir' src="./champions/Vladimir.jpg"></img> </div>
                         </li>
-                    <li><div className='glass'> <h3 className=''>Ziggs</h3> <img className='champion' src="./champions/Ziggs.jpg"></img></div>
+                    <li><div className='glass'> <h3 className=''>Ziggs</h3> <img className='champion ziggs' src="./champions/Ziggs.jpg"></img></div>
                         </li>
                 </ul>
             </header>

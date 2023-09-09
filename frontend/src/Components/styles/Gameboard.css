@@ -6,10 +6,12 @@ display: flex;
     justify-content: center;
     position: relative;
     width: 100%;
+    z-index: 0;
 }
 .imgHolder img{
     cursor: pointer; 
     width: 90%;
+    z-index: 1;
 }
 #riven{
     bottom: 5%;
@@ -35,9 +37,9 @@ display: flex;
 }
 #vladimir{
     bottom: 5%;
-    left: 58%;
+    left: 80%;
     position: absolute;
-    height: 42%;
+    height: 45%;
     width: 9%;
 }
 #ziggs{
@@ -46,4 +48,8 @@ display: flex;
     position: absolute;
     height: 4%;
     width: 2%;
+}
+.champOnTheBoard{
+    cursor: pointer;
+    z-index: 2;
 }

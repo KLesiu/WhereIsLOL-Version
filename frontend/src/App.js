@@ -5,11 +5,42 @@ import './index.css';
 import { useState, useEffect } from 'react';
 function App() {
   const [start,setStart]=useState(false)
+  const [finish,setFinish]=useState(0)
+  const [pickedChampions,setPickedChampions]=useState([])
   useEffect(()=>{
     document.querySelector('#startButton').addEventListener("click",()=>{
       setStart(true)
     })
   },[])
+  useEffect(()=>{
+    const divsChamp = document.querySelectorAll(".champOnTheBoard")
+    if(finish !==5){
+      divsChamp.forEach((ele)=>{
+        ele.addEventListener("click",()=>{
+         if(document.querySelector(`.${ele.id}`)){
+          if(document.querySelector(`.${ele.id}`).classList.contains('correct')){
+            setPickedChampions([...pickedChampions,ele.id])
+            if(pickedChampions.includes(ele.id)){
+              return
+            }
+            setFinish(()=>finish+1)
+           
+           }
+         }else{
+          return
+         }
+       
+        })
+      })
+    }
+   
+  })
+  if(finish===5){
+    console.log(finish)
+    return(
+      <h2>hello</h2>
+    )
+  }
   if(start===false){
     return(
       <div className='App'>
