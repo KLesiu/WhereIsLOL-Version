@@ -19,11 +19,20 @@ function App() {
         ele.addEventListener("click",()=>{
          if(document.querySelector(`.${ele.id}`)){
           if(document.querySelector(`.${ele.id}`).classList.contains('correct')){
-            setPickedChampions([...pickedChampions,ele.id])
+            
             if(pickedChampions.includes(ele.id)){
-              return
+              return 
             }
-            setFinish(()=>finish+1)
+            setPickedChampions([...pickedChampions,ele.id])
+            setFinish(()=>{
+              if(pickedChampions.includes(ele.id)
+                
+              ){
+                return finish
+              }else{
+                return finish+1
+              }
+            })
            
            }
          }else{
