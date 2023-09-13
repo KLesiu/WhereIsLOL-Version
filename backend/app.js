@@ -2,6 +2,7 @@ const express = require("express")
 const mongoose=require("mongoose")
 let bodyParser = require("body-parser")
 require("dotenv").config()
+let user = require("./routes/user")
 
 // Mongoose connection
 mongoose.set("strictQuery",false)
@@ -18,6 +19,7 @@ const app = express()
 app.use(bodyParser.urlencoded({extended:false}))
 app.use(bodyParser.json())
 
+app.use('/api',user)
 
 app.listen(3001,()=>{
     console.log('Server starts at port 3001')
