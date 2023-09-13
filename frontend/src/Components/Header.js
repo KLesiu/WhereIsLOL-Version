@@ -1,6 +1,9 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import './styles/Header.css'
 const Header=(props)=>{
+    const reload=()=>{
+        window.location.reload()
+    }
    useEffect(()=>{
     const images=document.querySelectorAll(".champion")
     images.forEach((ele)=>{
@@ -13,11 +16,12 @@ const Header=(props)=>{
         })
     })
    })
+    
     if(props.start===true){
         return(
             <header>
-                <h1>WhereIs Champion?</h1>
-                <button id="leaderboardButton">Leaderboard</button>
+                <h1 style={{width:100+"%"}} onClick={reload} >WhereIs Champion?</h1>
+                
                 <ul className="championsBasket">
                     <li><div className='glass'> <h3 className=''>Akali</h3><img className='champion akali' src="./champions/Akali.jpg">
                         </img></div>
@@ -36,8 +40,8 @@ const Header=(props)=>{
     }
     return(
         <header>
-            <h1>WhereIs Champion?</h1>
-            <button id='leaderboardButton'>Leaderboard</button>
+            <h1 onClick={reload}>WhereIs Champion?</h1>
+            <button onClick={props.showLeaderboard} id='leaderboardButton'>Leaderboard</button>
         </header>
     )
 }

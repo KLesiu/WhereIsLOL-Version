@@ -27,10 +27,11 @@ header{
     justify-content: space-around;
 
     margin: 0;
-    width: 100vw;
+    width: 100%;
 }
 header h1{
     color: wheat;
+    cursor: pointer;
     font-family: 'Handjet', cursive;
     font-size: 70px;
     margin: 0;

@@ -3,6 +3,7 @@ const mongoose=require("mongoose")
 let bodyParser = require("body-parser")
 require("dotenv").config()
 let user = require("./routes/user")
+const cors= require("cors")
 
 // Mongoose connection
 mongoose.set("strictQuery",false)
@@ -18,6 +19,7 @@ async function main(){
 const app = express()
 app.use(bodyParser.urlencoded({extended:false}))
 app.use(bodyParser.json())
+app.use(cors())
 
 app.use('/api',user)
 

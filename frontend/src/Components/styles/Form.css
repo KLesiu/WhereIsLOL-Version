@@ -8,7 +8,7 @@ form{
     flex-direction: column;
     height: 65vh;
     
-    width: 100vw;
+    width: 100%;
 }
 form label, form input{
     
