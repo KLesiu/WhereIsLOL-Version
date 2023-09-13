@@ -1,6 +1,7 @@
 import Gameboard from './Components/Gameboard';
 import Header from './Components/Header';
 import PreGame from './Components/PreGame';
+import Form from './Components/Form';
 import './index.css';
 import { useState, useEffect } from 'react';
 function App() {
@@ -45,9 +46,13 @@ function App() {
    
   })
   if(finish===5){
-    console.log(finish)
+    
     return(
-      <h2>hello</h2>
+      <div className='App'>
+        <Header start={false} />
+        <Form />
+      </div>
+ 
     )
   }
   if(start===false){

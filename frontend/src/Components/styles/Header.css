@@ -27,6 +27,7 @@ header{
     justify-content: space-around;
 
     margin: 0;
+    width: 100vw;
 }
 header h1{
     color: wheat;
