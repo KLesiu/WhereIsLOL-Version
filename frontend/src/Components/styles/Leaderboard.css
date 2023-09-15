@@ -7,28 +7,29 @@
     flex-direction: column;
     width: 100%;
 }
-ul{
+#leaderBoard ul{
     margin: 0;
    
 }
-h2{
+#leaderBoard h2{
     border-bottom: 3px solid wheat;
     padding-bottom: 10px;
     color: wheat;
     font-size: 60px;
     text-shadow: 5px 5px 5px black;
 }
-h3{
+#leaderBoard h3{
     color: rgb(241, 230, 210);
 }
-.user::marker{
+#leaderBoard .user::marker{
     color: whitesmoke;
     font-size: 25px;
 
+
 }
 
-ol p{
-    color: red;
-    font-size: 30px;
+#leaderBoard ol p{
+    color: rgb(218, 107, 107);
+    font-size: 20px;
 }
 
