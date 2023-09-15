@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import uniqid from 'uniqid'
+import './styles/Leaderboard.css'
 
 const Leaderboard=(props)=>{
     const [names,setNames]=useState([])
@@ -19,19 +20,20 @@ const Leaderboard=(props)=>{
     },[])
     return(
         <div id="leaderBoard">
-            <ul>
+            <h2>Leaderboard</h2>
+            <ol>
             {    
                         names.map((ele)=>{
                           
                             return(
                                 <li className="user" key={uniqid()}>
                                     <h3>{ele.name}</h3>
-                                    <p>{ele.score}</p>
+                                    <p>Score: {ele.score}</p>
                                 </li>
                             )
                         })
                     }
-            </ul>
+            </ol>
         </div>
     )
 }
