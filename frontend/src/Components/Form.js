@@ -29,17 +29,21 @@ const Form=(props)=>{
             }
            }
     }
+    useEffect(props.setCount,[])
+   
     if(showBoard===true){
+        console.log(props.score)
         return(
             <Leaderboard />
         )
     }
     return(
         <form method="POST" onSubmit={addScore}>
+            
             <label htmlFor="name">Your name:</label>
             <input type="text" name="name" id="name"></input>
             <label htmlFor="score">Your score:</label>
-            <input type="score" value={6} id="score" disabled></input>
+            <input type="score" value={props.score} id="score" disabled></input>
             <button type="submit" id="buttonForm">SAVE</button>
         </form>
     )

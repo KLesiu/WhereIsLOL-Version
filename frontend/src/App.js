@@ -10,19 +10,38 @@ function App() {
   const [finish,setFinish]=useState(0)
   const [pickedChampions,setPickedChampions]=useState([])
   const [showLeaderboard,setShowLeaderboard]=useState(false)
+  const [score,setScore]=useState(0)
+  const [intervalId,setIntervalId]=useState(null)
+
+  const increment = ()=>{
+    setScore(oldScore=>oldScore+1)
+  }
+  const onClickStart=()=>{
+    console.log('elo')
+    if(intervalId===null){
+      console.log('siema')
+      setIntervalId(setInterval(increment,1000))
+    }
+  }
+  const onClickStop=()=>{
+    console.log('koniec')
+    clearInterval(intervalId)
+    setIntervalId(null)
+  }
 
   const getLeaderboard=()=>{
     setShowLeaderboard(true)
    
   }
-  const hideLeaderboard=()=>{
-    setShowLeaderboard(false)
-  }
+  
   useEffect(()=>{
     document.querySelector('#startButton').addEventListener("click",()=>{
-      console.log('start')
+      
       setStart(true)
     })
+  },[])
+  useEffect(()=>{
+    document.querySelector('#startButton').addEventListener("click",onClickStart)
   },[])
   useEffect(()=>{
     const divsChamp = document.querySelectorAll(".champOnTheBoard")
@@ -59,6 +78,7 @@ function App() {
   if(showLeaderboard===true){
     return(
       <div className='App'>
+        
         <Header start={false}  showLeaderboard={getLeaderboard} />
         <Leaderboard />
       </div>
@@ -69,7 +89,7 @@ function App() {
     return(
       <div className='App'>
         <Header start={false}   showLeaderboard={getLeaderboard} />
-        <Form />
+        <Form setCount={onClickStop} score={score} />
       </div>
  
     )
@@ -77,6 +97,7 @@ function App() {
   if(start===false){
     return(
       <div className='App'>
+        
         <Header start={false}   showLeaderboard={getLeaderboard}/>
         <PreGame />
       </div>
@@ -84,7 +105,8 @@ function App() {
   }
   return (
     <div className="App">
-      <Header start={true}   showLeaderboard={getLeaderboard} />
+    
+      <Header start={true} score={score}   showLeaderboard={getLeaderboard} />
       <Gameboard />
     </div>
   );

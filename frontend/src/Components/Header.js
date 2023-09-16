@@ -18,10 +18,12 @@ const Header=(props)=>{
    })
     
     if(props.start===true){
+        
         return(
             <header>
-                <h1 style={{width:100+"%"}} onClick={reload} >WhereIs Champion?</h1>
                 
+                <h1 style={{width:100+"%"}} onClick={reload} >WhereIs Champion?</h1>
+                <p>{props.score}</p>  
                 <ul className="championsBasket">
                     <li><div className='glass'> <h3 className=''>Akali</h3><img className='champion akali' src="./champions/Akali.jpg">
                         </img></div>
