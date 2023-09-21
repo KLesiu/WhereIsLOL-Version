@@ -17,14 +17,14 @@ function App() {
     setScore(oldScore=>oldScore+1)
   }
   const onClickStart=()=>{
-    console.log('elo')
+    
     if(intervalId===null){
-      console.log('siema')
+
       setIntervalId(setInterval(increment,1000))
     }
   }
   const onClickStop=()=>{
-    console.log('koniec')
+    
     clearInterval(intervalId)
     setIntervalId(null)
   }

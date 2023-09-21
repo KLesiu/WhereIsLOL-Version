@@ -9,14 +9,25 @@ const Leaderboard=(props)=>{
             return ele.json()
         }).then((data)=>{
             const arr = []
+            
+            
             data.map((ele)=>{
                 arr.push(ele)
+                
             })
-            return setNames(arr)
+           
+            
+            return setNames(sortedLowToHigh(arr))
+        })
+    }
+    const sortedLowToHigh=(players)=>{
+        return players.sort((a,b)=>{
+            return a.score - b.score
         })
     }
     useEffect(()=>{
         getLeadeboard()
+
     },[])
     return(
         <div id="leaderBoard">
