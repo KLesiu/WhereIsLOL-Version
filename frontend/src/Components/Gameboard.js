@@ -30,7 +30,8 @@ const Gameboard=(props)=>{
     },[])
     return(
         <div className="imgHolder">
-            <img id="imageBoard" alt="gameboard" src="./wallpapers/wallpaper.jpg"></img>
+            <img id="imageBoard"  alt="gameboard" src="./wallpapers/wallpaper.jpg"></img>
+            <a target="_blank" href="https://www.wallpaperuse.com/vien/ohxRxm/">Wallpaper source</a>
             <div className="champOnTheBoard"  id="riven"></div>
             <div className="champOnTheBoard" id="akali"></div>
             <div className="champOnTheBoard" id="nocturne"></div>
